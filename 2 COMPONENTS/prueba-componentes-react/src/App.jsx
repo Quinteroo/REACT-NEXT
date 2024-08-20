@@ -3,6 +3,7 @@
 
 import './App.css'
 import Greetings from './components/Greetings'
+import Button from './components/button/Button'
 
 function App() {
   const name = 'Miguel'
@@ -17,6 +18,7 @@ function App() {
       <p>¿cuantas ruedas tiene mi coche si ya tengo 1? = {wheelCar + 1} </p>
       <p>{x < 12 ? "buenos días" : "buenas noches"}</p>
       <Greetings name="Miguel" surname="Quintero" />
+      <Button />
     </div>
   )
 }
