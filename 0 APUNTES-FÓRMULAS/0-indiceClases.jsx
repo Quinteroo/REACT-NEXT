@@ -24,4 +24,8 @@
 //* 27.00 pasar una función como props
 // 41.00 manda parámetros sin definir y valores por defecto
 // 44.00 estilos como props
-// 48.00
+// 56.00 crea botones con el Figma
+//* 01.04.00 ¿actua type como className?
+// 01.13.00 ¿qué es un children?
+// 01.16.00  eventos
+// 01.23.00 listado de eventos más utilizados
