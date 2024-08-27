@@ -46,3 +46,11 @@ export default app
 // en este caso nos devuelve un objeto con los parámetros por consola
 
 { text: "saludar" }
+
+//! listado de eventos más utilizados
+onClick
+onsubmit
+oninput
+onFocus
+onBlur
+onChange
