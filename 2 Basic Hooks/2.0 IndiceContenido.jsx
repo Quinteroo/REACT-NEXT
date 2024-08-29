@@ -9,7 +9,11 @@
 // 16.00 crea eventos y funciones en componentes
 //* 19.00 cambia estilos en función de variables
 // 26.00 como funcionan los estados useState
-// 28.00 ¿por qué con variables no se renderizan lso cambios?
-// 30.. construye un estado ejemplo
+// 27.00 ¿por qué con variables no se renderizan lso cambios?
+//* 28.00 uso real de los Estados
+// 30.00 construye un estado ejemplo
+//* 34.00 - 43.00 como funciona el Estado
+// 47.00 da estilos generales en index.css
+// 49.00 crea componente Switch
 
 
