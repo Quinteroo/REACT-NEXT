@@ -15,5 +15,6 @@
 //* 34.00 - 43.00 como funciona el Estado
 // 47.00 da estilos generales en index.css
 // 49.00 crea componente Switch
-
+// 50.00 ¿donde NO usar un estado?
+//* 50.30 constryte un menu desplegable
 
