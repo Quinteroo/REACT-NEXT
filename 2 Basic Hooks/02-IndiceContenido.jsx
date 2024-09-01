@@ -17,4 +17,18 @@
 // 49.00 crea componente Switch
 // 50.00 ¿donde NO usar un estado?
 //* 50.30 constryte un menu desplegable
+// 53.00 por qué guarda las imagenes en la carpeta public
+// 54.00 estilos menu desplegable
+//* 56.00 manda componente header con props y estilos
+//* 59.00 incluye los estilos estilos en línea
+//* 01.05.00 - 01.14.00 incluye funcionalidad en el botón desplegable
+// 01.15.00 asincronía en el cambio de estados
+//* 01.24.00 petición Fetch API + useEffect
+// 01.34.00 - 01.41.00¿por qué no se renderiza la imágenes del fetch?
+// 01.42.00 - uso de useEffect
+//* 01.43.00 petición fetchAPI con useEffect que depende de algo
+//
+// 
+
+
 
