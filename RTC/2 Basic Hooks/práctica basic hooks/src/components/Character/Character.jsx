@@ -14,11 +14,12 @@ const Character = () => {
 
   }, [])
 
-  function rotateImage(id) {
-    const updatedRotation = { ...rotated }; // Crear una copia del estado actual
-    updatedRotation[id] = !updatedRotation[id]; // Alternar la rotación para el ID dado
-    setRotated(updatedRotation); // Actualizar el estado con la nueva rotación
-  }
+  //! DEBEMOS INDICAR EN LA FUNCIÓN EL ID PARA QUE SE ROTE SOLO UNA IMAGEN
+  // function rotateImage(id) {
+  //   const updatedRotation = { ...rotated }; // Crear una copia del estado actual
+  //   updatedRotation[id] = !updatedRotation[id]; // Alternar la rotación para el ID dado
+  //   setRotated(updatedRotation); // Actualizar el estado con la nueva rotación
+  // }
 
   return (
     <div>
@@ -26,8 +27,10 @@ const Character = () => {
         <img
           key={e.id}
           src={e.image}
-          onClick={() => rotateImage(e.id)}
-          className={rotated[e.id] ? "rotated" : ""}
+          onClick={() => setRotated(!rotated)}
+          className={rotated ? "rotated" : ""}
+        //onClick={() => rotateImage(e.id)}
+        //className={rotated[e.id] ? "rotated" : ""}
 
         />
       ))}
