@@ -11,7 +11,7 @@
 // 11.40 index.css - estilos generales
 // 15.00 background animado
 // 16.00 componente - background animado
-// 19.27 Cntrl + H para selecionar todos los elementos iguales marcados
+//* 19.27 Cntrl + H para selecionar todos los elementos iguales marcados
 // 21.00 BrowserRouter y router
 // 25.00 empieza a construir con useEffect el componente Characters
 // 30.00 crea el useState loading y lo coloca dentro al abrir y cerrar el useEffect
