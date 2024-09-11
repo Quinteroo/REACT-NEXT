@@ -8,6 +8,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Anton", sans-serif;
+  color: var(--qgd-color-2)
 }
 
 :root{
