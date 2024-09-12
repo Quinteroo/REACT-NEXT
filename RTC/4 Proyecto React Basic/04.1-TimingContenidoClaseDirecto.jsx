@@ -28,7 +28,7 @@
 // 42.00 estructura del div de la imagen
 //* 45.00 - 49.00  crea funcionalidad CSS la sobrecapa del div con el nombre
 // 53.00 termina maquetar .card
-
+// 54.00 font-size Character-card  
 
 
 
