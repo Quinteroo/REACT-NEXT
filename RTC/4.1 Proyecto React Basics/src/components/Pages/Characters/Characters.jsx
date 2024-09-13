@@ -2,6 +2,8 @@
 import React from "react"
 import "./Characters.css"
 import { useState, useEffect } from "react"
+import Loading from "../../Loading/Loading.jsx"
+import CharacterCard from "../../CharacterCard/CharacterCard.jsx"
 
 
 
@@ -26,19 +28,10 @@ const Characters = () => {
 
   return (
     < section className="image-character-container" >
+      {loading && <Loading />}
       {
-        characters.map((e) => (
-          <div className="character-card" key={e._id}>
-            <div className="div-character-name">
-              <h2>{e.name}</h2>
-            </div>
-            <div className="img-wrp">
-              <img
-                src={e.image}
-                alt={e.name}
-              />
-            </div>
-          </div>
+        characters.map((character) => (
+          <CharacterCard key={character._id} character={character} />
 
         ))
       }
