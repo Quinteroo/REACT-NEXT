@@ -31,7 +31,14 @@
 // 54.00 font-size Character-card
 // starBacground componente, revisar que tenga className
 //* 57.00 - 01.04.00 extrae character-card como compoennte
+// extrae el css también
 // 01.03.00 qué es un childre
+// 01.04.00 ¿tarda los datos un tiempo?
+// 01.08.00 empezamos paginación
+// 01.12.00 maqueta botones paginatio
+//* 01.16.00 useState Pagination y eventos
+//* 01.26.00 modifica url fetch para cambiar en función de useState page
+// 01.30.00
 
 
 

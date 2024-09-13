@@ -1,42 +1,31 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react"
 import "./Characters.css"
 import { useState, useEffect } from "react"
-import Loading from "../../Loading/Loading.jsx"
-import CharacterCard from "../../CharacterCard/CharacterCard.jsx"
+import componenteExtraído from "./09-componenteExtraído"
 
 
 
 
 
 const Characters = () => {
-
   const [characters, setCharacters] = useState([])
-  const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
 
-
   useEffect(() => {
-    setLoading(true)
-    setCharacters([])
 
-    fetch(`https://starwars-databank-server.vercel.app/api/v1/characters?page=${page}&limit=20`)
+    fetch(`https://starwars-databank-server.vercel.app/api/v1/characters?page=${page}&limit=20`) //! page
       .then((res) => res.json())
       .then((res) => { setCharacters(res.data) });
-    setLoading(false)
-  }, [page])
+  }, [page]) //! importante que en el array de dependencias indiquemos en que se tiene que fijar si cambia para volver a hacer la llamda
 
 
 
   return (
     < section className="image-character-container" >
-      {loading && <Loading />}
-      {
-        characters.map((character) => (
-          <CharacterCard key={character._id} character={character} />
+      {characters.map((e) => (
+        <componenteExtraído key={e._id} character={e} />
 
-        ))
-      }
+      ))}
 
       <div className="pagination">
         <button onClick={() => setPage(page - 1)}>{"<"}</button>
@@ -47,9 +36,6 @@ const Characters = () => {
     </section >
   );
 }
-
-
-
 
 
 export default Characters
