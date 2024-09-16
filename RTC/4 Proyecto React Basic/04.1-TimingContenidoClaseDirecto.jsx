@@ -38,7 +38,8 @@
 // 01.12.00 maqueta botones paginatio
 //* 01.16.00 useState Pagination y eventos
 //* 01.26.00 modifica url fetch para cambiar en función de useState page
-// 01.30.00
+// 01.31.00 ¿porqué no se peude extraer useState?
+// 01.33.00 componetiza pagination
 
 
 
