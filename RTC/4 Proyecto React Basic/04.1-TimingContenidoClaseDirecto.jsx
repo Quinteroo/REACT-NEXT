@@ -42,6 +42,29 @@
 // 01.33.00 componetiza pagination
 
 
+//! PARTE 2
+// 01.20 a characters.map() añade LINK de react router
+// 02.20 añade to=" " pasándole un parámetro
+//* 06.00 useParams() ¿cómo pasar la info del personaje mediante rutas?
+// 08.00 petición Fetch con el parámetro recogido con useParams
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
 
 
 

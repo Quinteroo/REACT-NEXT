@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Characters />} />
-          <Route path='character' element={<Character />} />
+          <Route path='/character/:id' element={<Character />} />
         </Route>
       </Routes>
     </BrowserRouter>
