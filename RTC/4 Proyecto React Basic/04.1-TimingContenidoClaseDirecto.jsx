@@ -47,15 +47,20 @@
 // 02.20 añade to=" " pasándole un parámetro
 //* 06.00 useParams() ¿cómo pasar la info del personaje mediante rutas?
 // 08.00 petición Fetch con el parámetro recogido con useParams
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// 10.00 useState()
+// 11.00 useEffect() para petición fetch de character para que no se renderice infinitamente
+// 13.00 componente character
+// 14.00 CSS character
+// 16.30 hover sober div character
+// 20.00 starBackground z-index: -1
+// 25.00 MOBILE RESPONSIVE
+// 28.00 media queris
+// 33.00 ¿por que {character} en componente hijo es undefined?
+//* 34.00 Optional Chaining (se podría sustituir con un loading)
+// 48.00 minijuego
+// 50.00 fetch con todos los droides
+// 55.00 piensa en la manera de calcular la fuerza de los droides
+// 56.00 transforma suma ID en número
 
 
 

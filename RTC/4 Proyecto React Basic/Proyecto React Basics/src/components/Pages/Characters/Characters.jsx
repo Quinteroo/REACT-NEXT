@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import Loading from "../../Loading/Loading.jsx"
 import CharacterCard from "../../CharacterCard/CharacterCard.jsx"
 import Pagination from "../../Pagination/Pagination.jsx"
+import { Link } from "react-router-dom"
 
 
 
@@ -38,7 +39,9 @@ const Characters = () => {
       {loading && <Loading />}
       {
         characters.map((character) => (
-          <CharacterCard key={character._id} character={character} />
+          <Link key={character._id} to={`/character/${character._id}`} >
+            <CharacterCard character={character} />
+          </Link>
 
         ))
       }
