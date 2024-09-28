@@ -9,6 +9,7 @@ const CodePost = ({ posts }) => {    //! posts simula un array de objetos que re
 
   const orderPostWithTitle = React.useMemo(() => {
 
+    // cálculo complejo aquí...
 
   }, [posts]) //! le añadimos un array de dependecias
 

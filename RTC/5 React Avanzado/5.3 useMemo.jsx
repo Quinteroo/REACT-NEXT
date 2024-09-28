@@ -2,8 +2,8 @@
 
 //! Hook useMemo (no Memo)
 // useMemo es un hook de React que se utiliza para memoizar valores calculados en componentes funcionales.
-// En diferencia con React.memo que memoiza componentes para evitar su renderizado innecesario, useMemo memoiza
-// valores computados para evitar recalcularlos en cada renderizado del componente.
+//* En diferencia con React.memo que memoiza componentes para evitar su renderizado innecesario, useMemo memoiza
+//* valores computados para evitar recalcularlos en cada renderizado del componente.
 
 
 
