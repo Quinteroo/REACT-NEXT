@@ -26,7 +26,7 @@
 
 
 
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import './UseCallback.css';
 
 const UseCallback = () => {
@@ -47,5 +47,85 @@ const UseCallback = () => {
 };
 
 export default UseCallback;
+
+//! timing contenido
+// 00.02 crea proyecto, limpia y crea compoennete
+// 00.03 usa useCallback
+// 00.04 pasa funcion a componente hijo
+//
+
+import React, { useCallback } from 'react'
+
+const MyComponent = ({ props }) => {    //! esto es una estructura clásica
+
+  const callback = () => {
+    return "result"
+  }
+
+  const memoizedCallback = useCallback(callback, [props]) //! la función está memoizada, y nunca va a cambiar a menos que entre algo por props
+  //* es decir, [props] es el array de dependencia , es decir que por más que se rerenderice el componete no se creara una nueva función
+
+  return (
+    <ChildComponent callback={memoizedCallback} />
+  )
+}
+
+// export default MyComponent
+
+
+
+// 05.00 verificación de igualdad de funciones
+//* 10.00 cuando nos conviene usarCallback
+// 11.30 ejemplo básico de cuando utilizar useCalback
+
+
+import React, { useCallback, useState } from 'react'
+
+
+const Counter = () => {
+
+  const [countOne, setCountOne] = useState(0)
+  const [countTwo, setCountTwo] = useState(0)
+
+  const memoizedCountOne = useCallback(() => setCountOne(countOne), [countOne])
+  const memoizedCountTwo = useCallback(() => setCountTwo(countTwo), [countTwo])
+
+  //! memorizando la función de esta forma, evitamos que cuando el usuario 
+  //! haga click en un botón, se rerenderice de nuevo todas las funciones,
+  //! ya que estas tienen array de dependencias
+  //* es decir, [props] es el array de dependencia , es decir que por más que se rerenderice el componete no se creara una nueva función
+
+
+  return (
+    <>
+      <div>
+        <h3>{countOne} || {countTwo}</h3>
+        <Button HandleClick={memoizedCountOne} name="button+1" />
+        <Button HandleClick={memoizedCountTwo} name="button+2" />
+      </div>
+
+    </>
+
+  )
+
+
+}
+
+
+
+//! TIMING CONTENIDO - HOOK USECALLBACK AVANZADO
+// 01.00 crea componente DeleteUser con memo, return un botón con unenvetno Onclick de una función callback
+// 03.00 crea la función callback
+
+
+
+
+
+
+
+
+
+
+
 
 
