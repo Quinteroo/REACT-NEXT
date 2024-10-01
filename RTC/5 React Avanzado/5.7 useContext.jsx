@@ -58,7 +58,24 @@
 
 
 //! TIMING CONTENIDO USEcONTEXT AVANZADO
-// 01.00 crea ccarpeta contexto
+// 01.00 crea ccarpeta context para guardar los contextos
+// 01.30 construye ThemeContect
+// 02.00 Theme provider
+// 04.00 useState con función
+// 05.00 calback
+//* 08.00 repaso de que como y porque hemos creado el Context
+//  09.30 ThemeSwitcher
+// 12.00 añade ThemeSwitcher en App.jsx
+// 13.00 Theme Context en App.jsx para modificar estilos
+//* 14.00 como modificar CSS
+// 16.00 error en el evento, busca soluxión
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
