@@ -27,10 +27,24 @@
 //* rgc-mc npmjs.com/package(rcg-mc) crea componentes react desde terminal
 // 01.08.00 ejemplo con 5 componentes
 // 01.12.00 ¿para que sirve useContext?
-// 01.13.00
-//
-//
+// 01.13.00 explicación
+//* 01.15.00 crea carpeta utils (Providers) y AppContext.jsx
+// crea "el escaparate" de donde obtienen el dato los componentes
+// en AppContext
+//* 01.18.00 crea un componenete (la ubicación) que va a proveer al resto
+// el dato que ha pasado en el Provider era el que estaba en App.jsx, que uego elimina
+// 01.20.00 modifica los componentes para poder extrar la info de useContext
+// 01.21.00 en main.js envuelve <App/> con el compoennte <AppProvider />
+//* 01.22.00 como incorpora useContext
+//* 01.26.30 ejemplo con cambiar tema dark/light
 
+//? =========================
+//* 01.43.00 useReducer
+// crea carpeta utils y recuder.js
+// crea el INITIAL_STATE
+// 01.44.00 crea la funcio reducer
+// 01.46.00 hace un switchCase
+// 01.50.00 extrae en un compoennte el reducer para emplearlo
 
 
 
