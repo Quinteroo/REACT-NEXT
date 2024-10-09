@@ -1,3 +1,6 @@
+//* MEMORIZAR FUNCIÓN CON CÁLCULO COSTOSO
+
+
 import { useMemo } from 'react';
 
 function App({ data }) {
