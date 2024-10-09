@@ -1,3 +1,6 @@
+//* MEMORIZAR COMPONENTES
+
+
 import React, { useState } from 'react'
 
 //! el abuso de uso de memos, puede que haya un abuso de comprobaciones para no re-renderizar y relentizamos nuestra app
