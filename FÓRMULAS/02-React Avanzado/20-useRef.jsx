@@ -1,3 +1,5 @@
+//* EVITAR RE-RENDERIZADOS
+
 import React, { useState, useRef } from 'react'
 
 const CodeUseref = () => {
