@@ -82,6 +82,11 @@ const Calculator = () => {
     input.current.value = ""; // Limpiar el input después del cálculo
   };
 
+
+  //! En React, los componentes despachan las acciones, y cuando lo hacen, proporcionan los datos 
+  //! necesarios en action.payload. El reducer simplemente recibe estos datos y actualiza 
+  //! el estado basándose en ellos.
+
   return (
     <div className="calc">
       <input type="number" ref={input} />

@@ -7,6 +7,7 @@ const INITIAL_CALCULATOR_STATE = {
   n2: 0,
   result: 0,
   historicResults: [],
+  historicResultsSorted: [],
 };
 
 const calculatorReducer = (state, action) => {
@@ -15,31 +16,52 @@ const calculatorReducer = (state, action) => {
       return {
         ...state,
         n1: parseFloat(action.payload.inputValue), // convierte a número
-        operation: "+",
+        operation: action.payload.operation,
       };
+
     case "RESULT":
-      const result = state.operation === "+"
-        ? state.n1 + parseFloat(action.payload.inputValue)
-        : state.result;
+      const n2 = parseFloat(action.payload.inputValue); // Almacena el segundo número
+      let result;
+
+      // Realiza la operación basada en el valor de 'operation'
+      switch (state.operation) {
+        case "+":
+          result = state.n1 + n2;
+          break;
+        case "-":
+          result = state.n1 - n2;
+          break;
+        case "*":
+          result = state.n1 * n2;
+          break;
+        case "/":
+          result = n2 !== 0 ? state.n1 / n2 : "Error"; // Evita división por 0
+          break;
+        case "%":
+          result = state.n1 % n2;
+          break;
+        default:
+          result = "Operación no válida";
+      }
 
       return {
         ...state,
-        n2: parseFloat(action.payload.inputValue),
-        result,
+        n2: n2,
+        result: result,
         historicResults: [...state.historicResults, result],
+        historicResultsSorted: [...state.historicResults].sort((a, b) => a - b), // Acceso a state
       };
+
     default:
       return state;
   }
 };
 
-
-
 const Calculator = () => {
   const [state, dispatch] = useReducer(calculatorReducer, INITIAL_CALCULATOR_STATE);
   const input = useRef();
 
-  const { result, operation, n1, n2, historicResults } = state;
+  const { result, historicResultsSorted } = state;
 
   const setOperation = useCallback(
     (operation) => {
@@ -47,10 +69,19 @@ const Calculator = () => {
         type: "SET_OPERATION",
         payload: { inputValue: input.current.value, operation: operation },
       });
-      input.current.value = "";
+      input.current.value = ""; // Limpiar el input después de seleccionar una operación
     },
-    [operation]
+    [dispatch]
   );
+
+  const handleResult = () => {
+    dispatch({
+      type: "RESULT",
+      payload: { inputValue: input.current.value }, // Pasamos el valor del input
+    });
+    input.current.value = ""; // Limpiar el input después del cálculo
+  };
+
 
   //! En React, los componentes despachan las acciones, y cuando lo hacen, proporcionan los datos 
   //! necesarios en action.payload. El reducer simplemente recibe estos datos y actualiza 
@@ -60,24 +91,19 @@ const Calculator = () => {
     <div className="calc">
       <input type="number" ref={input} />
       <div className="operations">
-        <button onClick={setOperation("+")}>+</button>
-        <button onClick={() => {/* Otras funciones */ }}>-</button>
-        <button onClick={() => {/* Otras funciones */ }}>X</button>
-        <button onClick={() => {/* Otras funciones */ }}>/</button>
-        <button onClick={() => {/* Otras funciones */ }}>%</button>
+        <button onClick={() => setOperation("+")}>+</button>
+        <button onClick={() => setOperation("-")}>-</button>
+        <button onClick={() => setOperation("*")}>X</button>
+        <button onClick={() => setOperation("/")}>/</button>
+        <button onClick={() => setOperation("%")}>%</button>
         <button onClick={handleResult}>=</button>
       </div>
       <h2>Último resultado: {result}</h2>
       <div className="historic">
         <h2>Resultados históricos</h2>
-        {historicResults.length > 0 && (
-          historicResults
-            .slice() // Clonamos el array para evitar mutaciones
-            .sort((a, b) => a - b) // Ordenamos los resultados de menor a mayor
-            .map((res, index) => (
-              <p key={index}>{res}</p>
-            ))
-        )}
+        {historicResultsSorted.map((result, index) => (
+          <p key={index}>{result}</p>
+        ))}
       </div>
     </div>
   );
