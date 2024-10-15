@@ -5,8 +5,9 @@
 // 02.00 crea componente
 // 02.40 importa useForm()
 //* 03.00 defaultValues
-// 
-
+// esto va a representar lso valores del formulario (clave -valor)
+// 07.00 register
+// 09.00 App con compoennte
 
 
 
