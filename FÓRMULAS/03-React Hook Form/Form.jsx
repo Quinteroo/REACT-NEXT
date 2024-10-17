@@ -11,9 +11,6 @@ const Form = () => {
     }
   })
 
-  // Nombre de usuario: requerido
-  // Correo electrónico: requerido y patrón regex de email
-  // Contraseña: requerido y patrón regex de contraseña
 
   const submit = (formData) => {
     console.log(formData);
@@ -34,19 +31,48 @@ const Form = () => {
             }
           }}
         />
+        {formState.errors.userName ? (
+          <p>{formState.errors.userName.message}</p>
+        ) : null}
       </div>
       <div>
         <label htmlFor="email">
           email*
         </label>
-        <input type="text" id="email" />
+        <input type="text" id="email"
+          {...register("email"),
+          {
+            required: true,
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message:
+                "El email no es válido, revisa la ortografía ❌",
+            },
+          }}
+        />
+        {formState.errors.password ? (
+          <p>{formState.errors.email.message}</p>
+        ) : null}
 
       </div>
       <div>
         <label htmlFor="password">
           contraseña*
         </label>
-        <input type="text" id="password" />
+        <input type="text" id="password"
+          {...register("password"),
+          {
+            required: true,
+            pattern: {
+              value: /^[0-9]{8}[A-Za-z]$/,
+              message:
+                "La contraseña debe incluir números, letras Mayúsculas y minúsculas y como máximos 8 caracteres ❌",
+            },
+          }}
+        />
+        {formState.errors.password ? (
+          <p>{formState.errors.userName.message}</p>
+        ) : null}
       </div>
       <button>Enviar</button>
     </form>
