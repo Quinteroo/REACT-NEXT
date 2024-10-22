@@ -4,6 +4,7 @@
 // 00.00 crea proyecto chajra_ui y otro de styled components
 
 //? === Chakra UI ====
+//? https://v2.chakra-ui.com/
 // 02.45 explica librería y documentación
 // 03.48 instala librería
 // 04.27 coloca el Provider
