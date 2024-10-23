@@ -30,3 +30,47 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
+
+//? ============= OPCIÓN 2 ===================
+
+
+//*  \main.jsx
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from "react-router-dom"
+import App from './App.jsx'
+import './index.css'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter basename='/'>
+      <App />
+    </BrowserRouter>
+  </StrictMode>,
+)
+
+
+
+//*  \App.jsx
+
+import './App.css'
+import { Routes, Route } from "react-router-dom"
+import Home from "./components/pages/Home/Home.jsx"
+import Painting from './components/pages/Painting/Painting.jsx'
+
+
+function App() {
+
+
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/painting/:id' element={<Painting />} />
+      </Routes>
+    </>
+  )
+}
+
+//export default App

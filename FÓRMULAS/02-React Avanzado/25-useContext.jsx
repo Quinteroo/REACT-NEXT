@@ -12,15 +12,17 @@ const AppProvider = ({ children }) => { //! children era todos los hijos que yo 
 
   const [mode, setMode] = useState("light")
 
-  return
-  <AppContext.Provider value={{       //! empleamos el AppContext que acabamos de crea para pasar los datos que queramos
-    nombre: "periquito de los palot",
-    mode: mode,
-    setMode: setMode
+  return (
+    <AppContext.Provider value={{       //! empleamos el AppContext que acabamos de crea para pasar los datos que queramos
+      nombre: "periquito de los palot",
+      mode: mode,
+      setMode: setMode
 
-  }}>
-    {children}     //! proveemos de este dato a todos nuestros hijos, y ya lo coge el que lo necesite
-  </AppContext.Provider>
+    }}>
+      {children}     //! proveemos de este dato a todos nuestros hijos, y ya lo coge el que lo necesite
+    </AppContext.Provider>
+  )
+
 
 }
 
@@ -32,6 +34,9 @@ export default AppProvider
 //* src\main.js
 // envolvemos con el proveedor el componente que queremos que tenga acceso, en este caso es App.jsx pues queremos que sea
 // toda la aplicaicón
+
+import AppProvider from "./provider/ThemeProvider.jsx" //! sin corchetes
+
 
 createRoot(document.getElementById('root')).render(
   <AppProvider>
