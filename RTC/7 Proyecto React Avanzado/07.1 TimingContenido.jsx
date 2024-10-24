@@ -64,10 +64,42 @@
 //* 55.00 sombra con un drop_shadow
 //* 56.00 condicional en la sombra con el useContext() según sea dark/light mode
 // 57.40 cambia el largo de la sombra según sea hover
+// 59.00 mide con lighthouse la velocidad de la web
 
-
-//? ==============
+//? ============ ventana CON DATOS DEL POKEMON
 //* 01.01.00
+// al hacer click que salgan los datos del pokemon
+// escogerle un combate
+// imagen clicable onClick , Navlink  o link de Router Dom
+// key={pokemon.id} en Link
+// ruta a colliseum / :id
+// useParams
+//* 01.06.00 ¿como evitar re-renderizar todas las peticionesde los pokemon?
+//* 01.07.00 seleciona pokemon ramdon
+// crea pokemonRandom useStte()
+// en el mismo useEffect otra petición fetch (en Colliseum)
+// en el el div de Colliseum pinta ambas img, con src de nuestro prokemon seleccionado
+// y el img src=pokemon ramdon
+
+
+//? === plantear la pelea ===
+//* 01.10.00
+// busca las imágenes de espaldas de los pokemon en la pokeapi
+//* 01.13.00 escoge las imágenes
+// accede mediante corchetes a las imágenes
+//* 01.15.00
+// empieza a maquetar el flex con los pokemons dentro
+// para situarlos a cada uno en su posición según la imagen
+// 01.19.28
+// busca fondo de pantalla
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
