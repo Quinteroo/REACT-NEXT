@@ -17,4 +17,8 @@
 3. Straming.
 
 
+## 3. Grupos de rutas y rutas dinámicas
+1. Definir un grupo de rutas.
+2. Rutas dinámicas.
+
 
