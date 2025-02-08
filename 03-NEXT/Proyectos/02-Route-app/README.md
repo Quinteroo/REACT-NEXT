@@ -13,7 +13,7 @@
 
 ## 2. Interfaz y estados del Loading
 1. El componente loading.tsx
-2. Server Side Rendering.
+2. Server Side Rendering. ![SSR](image.png)
 3. Straming.
 
 
