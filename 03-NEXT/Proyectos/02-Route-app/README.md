@@ -43,3 +43,7 @@
 ## 7. Traducir la app
 1. Internacionalización en Next.js: Configuración y enrutamiento.
 2. Añadir traducciones.
+
+## 8. Cómo organizar proyecto
+1. Configuración por defecto.
+2. Estrategias de organización de proyectos.
