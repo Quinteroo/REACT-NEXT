@@ -9,7 +9,8 @@
 1. Obtención de datos en el servidor con fetch.
 2. Caché de datos.
 
-
-Ejemplo (page.tsx)
 ## Gestión de formularios y server actions
+1. Introducción.
+2. Cómo crear una server action.
+3. Actualizaciones optimistas.
 ## Características avanzadas de fetch y las serves actions
