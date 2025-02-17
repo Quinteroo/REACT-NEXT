@@ -1,0 +1,25 @@
+.shape{
+  height: 0px;
+  width: 0px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+
+}
+
+/* 🛑 IMPORTANTE, EL NOMBRE ES EN SINGULAR >>> home.module.css */
+/* 🛑 IMPORTANTE, poner el .module es importantísimo porque le estamos indicando que queremos emplealo así */
+/* 🛑 si inspeccionamos la página, veremos que .shape Next.js le ha añadido un identificador único */
+
+
+/* ✅ ESTILOS CSS EN NEXT.JS ✅
+1 > taildwind
+2 > global.css  >>  son estilos globales que afectan desde aquí a toda la aplicación
+3 > module.css  >> estilos que podemos importar para compoenntes en específico, 
+
+ejemplo:
+
+import styles from ./ui/home.module.css
+
+className={sytles.shape}
+. */
