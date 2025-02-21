@@ -3,8 +3,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "start": "next start",
-    "seed": "ts-node -r dotenv/config ./app/seed/route.ts"
+    "start": "next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -31,5 +30,11 @@
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "ts-node": "^10.9.2"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "bcrypt",
+      "sharp"
+    ]
   }
 }
